@@ -1,0 +1,19 @@
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+.venv/
+
+# Raw data (do not upload)
+data/
+Crime_Data_from_2020_to_Present.csv
+
+# Large generated outputs (GitHub limit)
+output/*.csv
