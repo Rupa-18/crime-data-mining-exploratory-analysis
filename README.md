@@ -1,95 +1,151 @@
-# Website Exploration & Data Mining in Crime Analysis (Project 1)
-
-**Course:** DATA MINING (CSE 632) – Fall 2025  
-**University:** University of Louisville, Computer Science & Engineering  
-**Student:** Rupa Ghosh  
-**Submission Date:** September 18, 2025   
-
----
+# Crime Data Mining and Exploratory Analysis
 
 ## Overview
-This project explores crime incident data from Los Angeles (2020–Present) using data mining and exploratory analysis techniques. The goal is to preprocess real-world data, engineer meaningful features, and test hypothesis-driven patterns related to crime type, seasonality, time of occurrence, victim age, and residential location.
 
-The project emphasizes **clean data handling**, **reproducibility**, and **clear visual interpretation** rather than predictive modeling.
+This project analyzes over one million crime records from the **Los Angeles Crime Data (2020–Present)** dataset using data mining and exploratory analysis techniques. The objective is to clean and preprocess real-world data, engineer meaningful features, and investigate crime patterns related to seasonality, victim demographics, time of occurrence, and residential locations.
+
+The project emphasizes reproducible data analysis, statistical reasoning, and effective visualization rather than predictive modeling.
 
 ---
 
 ## Dataset
-- **Source:** data.gov  
-- **Dataset name:** *Crime Data from 2020 to Present*  
-- **Format:** CSV  
 
-The raw dataset is **not included** in this repository due to file size constraints.
+**Source:** Data.gov
 
+**Dataset:** Crime Data from 2020 to Present
 
-Additional instructions are available in `data/README.md`.
+**Format:** CSV
+
+The raw dataset is not included in this repository due to its large file size.
 
 ---
 
-## Preprocessing & Feature Engineering
-The following preprocessing steps were applied:
+## Skills Demonstrated
 
-- Feature selection based on hypothesis relevance
+- Data Cleaning
+- Data Preprocessing
+- Feature Engineering
+- Exploratory Data Analysis (EDA)
+- Hypothesis Testing
+- Statistical Analysis
+- Data Visualization
+- Pattern Discovery
+
+---
+
+## Technologies
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+
+---
+
+## Data Preparation
+
+The dataset was prepared using the following preprocessing pipeline:
+
+- Feature selection based on analysis objectives
 - Standardization of column names
 - Missing value handling
 - Date and time formatting
-- Feature creation:
-- Year, month, weekday
-- Daypart (morning, afternoon, evening, night)
-- Age groups
-- Crime classification into:
-- Violent
-- White-collar
-- Other
-- Residential location categorization:
-- Single-family
-- Multi-family
-
-Processed datasets are saved in the `output/` directory.
-
----
-
-## Hypotheses Tested
-1. **Seasonality:**  
-White-collar crimes decrease during summer months, while violent crimes increase.
-
-2. **Time & Age Concentration:**  
-Violent crimes are more concentrated during evening/night hours, particularly among young adults (ages 18–29), and this pattern increases over time.
-
-3. **Residential Location:**  
-Single-family residences experience a higher share of violent crimes compared to multi-family residences.
+- Temporal feature engineering
+  - Year
+  - Month
+  - Weekday
+  - Daypart (Morning, Afternoon, Evening, Night)
+- Demographic feature engineering
+  - Age groups
+- Crime categorization
+  - Violent Crimes
+  - White-Collar Crimes
+  - Other Crimes
+- Residential location categorization
+  - Single-Family
+  - Multi-Family
 
 ---
 
-## Visual Analysis
-The project uses multiple visualization techniques, including:
+## Research Questions
 
-- Bar charts
-- Line plots
-- Donut charts
-- Heatmaps
+This project investigates three hypothesis-driven questions:
 
-Key figures are saved in the `figures/` directory.  
-Selected highlights are shown below.
+### 1. Seasonality
 
-### Feature Selection Summary
-![Feature Selection](figures/feature_selection_kept_vs_dropped.png)
+Do white-collar crimes decrease during summer months while violent crimes increase?
 
-### Seasonal Crime Trends
-![Seasonal Trends](figures/summer_vs_nonsummer_trends.png)
+### 2. Time and Victim Age
 
-### Residential Crime Distribution
-![Residential Heatmap](figures/home_type_heatmap.png)
+Are violent crimes more concentrated during evening and night hours, particularly among young adults (18–29), and has this pattern changed over time?
 
-Additional figures are available in the `figures/` folder.
+### 3. Residential Location
 
+Do single-family residences experience a higher proportion of violent crimes than multi-family residences?
 
 ---
+
+## Key Visualizations
+
+### Age Group Distribution
+
+<p align="center">
+<img src="figures/age_group_distribution.png" width="700">
+</p>
+
+---
+
+### Crime Distribution by Time of Day
+
+<p align="center">
+<img src="figures/daypart_distribution.png" width="700">
+</p>
+
+---
+
+### Summer Crime Trends
+
+<p align="center">
+<img src="figures/summer_monthly_crimes_by_year.png" width="700">
+</p>
+
+---
+
+### Violent Crimes at Residential Locations
+
+<p align="center">
+<img src="figures/violent_crimes_residence_heatmap.png" width="700">
+</p>
+
+---
+
+## Key Findings
+
+- Cleaned and analyzed a real-world dataset containing over one million crime records.
+- Engineered temporal and demographic features to support meaningful exploratory analysis.
+- Investigated seasonal, temporal, and residential crime patterns through hypothesis-driven analysis.
+- Produced multiple visualizations to communicate crime trends and support analytical conclusions.
+
+---
+
 
 ## How to Run
-1. Clone this repository
-2. Download the dataset and place it in `data/`
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
+
+Clone the repository
+
+```bash
+git clone https://github.com/Rupa-18/crime-data-mining-exploratory-analysis.git
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Download the **Los Angeles Crime Data (2020–Present)** dataset from Data.gov and place it inside the `data/` directory before running the notebooks or scripts.
+
+---
 
